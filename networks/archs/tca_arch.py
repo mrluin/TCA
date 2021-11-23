@@ -12,7 +12,7 @@ class TCAInferenceArch(nn.Module):
         self.mid_channels = mid_channels
         #
         self.spynet = SPyNet(pretrained=spynet_pretrained)
-        self.cross_flow_net = SPyNet(pretrained=spynet_pretrained)
+        self.fhnetwork = SPyNet(pretrained=spynet_pretrained)
 
         #
         self.backward_resblocks = ResidualBlocksWithInputConv(

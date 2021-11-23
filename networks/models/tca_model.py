@@ -12,8 +12,8 @@ from utils.img_utils import tensor2img, imwrite
 from networks.ops.sync_batchnorm import convert_model
 
 
-loss_module = importlib.import_module('losses')
-metric_module = importlib.import_module('metrics')
+# loss_module = importlib.import_module('losses')
+# metric_module = importlib.import_module('metrics')
 eps = 1e-8
 
 
@@ -40,9 +40,6 @@ class TCAInferenceModel(BaseModel):
         if data.get('lq', None) is not None:
             self.lq_seq = data['lq'].to(self.device)  # input lr
 
-        if data.get('gt', None) is not None:
-            self.hq_seq = data['gt'].to(self.device)  # target gt
-
     def test(self):
         self.network_g.eval()
         with torch.no_grad():
@@ -62,7 +59,6 @@ class TCAInferenceModel(BaseModel):
 
             val_data = dataloader.dataset[idx]  # orderly get one folder/clip
             val_data['lq'].unsqueeze_(0)
-            val_data['gt'].unsqueeze_(0)
 
             video_idx = val_data['key']  # folder/clip
 
@@ -73,7 +69,6 @@ class TCAInferenceModel(BaseModel):
 
             sr_imgs = tensor2img(visuals['result_seq'], rgb2bgr=False, min_max=(0, 1))  # numpy  rgb
 
-            del self.hq_seq
             del self.lq_seq
             del self.output
 
@@ -97,12 +92,9 @@ class TCAInferenceModel(BaseModel):
 
     def get_current_visuals(self):
         t = self.lq_seq.shape[1]
-        assert (t == self.hq_seq.shape[1] and t == self.output.shape[1])
         lq = self.lq_seq.detach().cpu().squeeze(0)
-        hq = self.hq_seq.detach().cpu().squeeze(0)
         result = self.output.detach().cpu().squeeze(0)
         return OrderedDict([
             ('lq_seq', [lq[i] for i in range(t)]),
-            ('hq_seq', [hq[i] for i in range(t)]),
             ('result_seq', [result[i] for i in range(t)]),
         ])
