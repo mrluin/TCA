@@ -6,32 +6,36 @@
 Test data includes REDS4, Vid4, SPMC30, Vimeo90K-T and UDM10. Before evaluation, please download corresponding testing 
 and put them in given paths.
 
-| Type                     | Download URL                                | Path               |
-| ------------------------ |:-------------------------------------------:|:------------------:|
-| REDS4                    | All ground truth sequences in RGB format    |./dataset/REDS4     |
-| SPMC30                   | All low quality sequences in RGB format     |./dataset/SPMC30    |
-| UDM10                    | All ground truth sequences in YCbCr format  |./dataset/UDM10     |
-| Vid4                     | All low quality sequences in YCbCr format   |./dataset/Vid4      |
-| Vimeo90K-T               | Ground truth test sequences in RGB format   |./dataset/Vimeo90K-T|
+| Type                     | Download URL                                | Path                                                      |
+| ------------------------ |:-------------------------------------------:|:---------------------------------------------------------:|
+| REDS4                    | [REDS4 download](https://seungjunnah.github.io/Datasets/reds.html)                                      |./dataset/REDS4     |
+| SPMC30                   | [SPMC30 download](https://drive.google.com/drive/folders/1ULUNRZfZfuiLUy8N0E0ZpRUOcWaPhLfe?usp=sharing) |./dataset/SPMC30    |
+| UDM10                    | [UDM10 download](https://drive.google.com/drive/folders/1PB7OHKUujMfmns6aYU_U3gwC7SfZorwZ?usp=sharing)  |./dataset/UDM10     |
+| Vid4                     | [Vid4 download](https://drive.google.com/drive/folders/1276bKDRlhghQll5iS3_9GOU2MNTzfxv4?usp=sharing)   |./dataset/Vid4      |
+| Vimeo90K-T               | [Vimeo90K-T download](http://toflow.csail.mit.edu/)                                                     |./dataset/Vimeo90K-T|
 
+For BI degradation, we adopt matlab imresize function. 
+For BD degradation, we adopt `BD_degradation.m`.
 
 ## Code
 
-### Installation
+### installation
 ```
-# Create a new anaconda python environment (tca)
-conda create -n tca python=3.7 
+# create conda env
+conda create -n tca python=3.7
 
-# Activate the created environment
-conda activate tca
+# install pytorch, torchvision, cupy
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=9.2 -c pytorch
+conda install -c conda-forge cupy cudatoolkit=10.2
 
-# Install dependencies
-pip install -r requirements.txt
-```
-
+# install other dependencies
+pip install pyyaml, wandb, opencv-python, tqdm, lpips
+``` 
+### Checkpoints
+Download checkpoints from [Google Drive](https://drive.google.com/drive/folders/1rQV0gfQWUrFt5hzNkklWcs_zVOftnPeN?usp=sharing), and put them in `./chekpoints`.
 ### Evaluation
 
-Inference on datasets with BI and BD degradations:
+Inference model on testing data:
 ```
 python inference.py --opt ./options/tca_reds_bi4x_reds4_inference.yml
 
@@ -48,6 +52,9 @@ python metrics_calculator.py
 
 python flow_warping_error_calculator.py
 ```
+
+### Qualitative Comparison
+Animated comparison results please refer to [Google Drive](https://drive.google.com/drive/folders/1bO6Sfl54QuO5PD3NNF4ZutZ-4Geg2Qnd?usp=sharing).
 
 
 ## License
