@@ -1,0 +1,62 @@
+name: tca_vimeo90k_bd4x_model_udm10_vid4_vimeo90kt_spmc30_inference
+model_type: TCAInferenceModel
+scale: 4
+num_gpu: 1
+manual_seed: 1
+logger_name: TCA-Learning
+
+datasets:
+  test_udm10:
+    name: UDM10
+    type: VideoRecurrentInferenceDataset
+    dataroot_lq: ./dataset/UDM10/BD4x_kernel12_sigma16
+    io_backend:
+      type: disk
+
+    cache_data: false
+    num_frame: -1
+
+  test_vid4:
+    name: Vid4
+    type: VideoRecurrentInferenceDataset
+    dataroot_lq: ./dataset/Vid4/BD4x_kernel12_sigma16
+    io_backend:
+      type: disk
+
+    cache_data: false
+    num_frame: -1
+
+  test_spmc30:
+    name: SPMC30
+    type: VideoRecurrentInferenceDataset
+    dataroot_lq: ./dataset/SPMC30/BD4x_kernel12_sigma16
+    io_backend:
+      type: disk
+
+    cache_data: false
+    num_frame: -1
+
+  test_vimeo90kt:
+    name: Vimeo90K-T
+    type: Vimeo90KInferenceRecurrentDataset
+    dataroot_lq: ./dataset/Vimeo90K-T/BD4x_kernel12_sigma16
+    meta_info_file: ./data/meta_info/meta_info_vimeo90k_test.txt
+    io_backend:
+      type: disk
+
+    cache_data: false
+    num_frame: 7
+
+network_g:
+  type: TCAInferenceArch
+  mid_channels: 64
+  num_blocks: 30
+  spynet_pretrained: ~
+
+path:
+  pretrain_network_g: ./checkpoints/tca_basicvsr_vimeo90k_bd4x_model.pth
+  strict_load_g: true
+  param_key_g: network_g
+
+val:
+  suffix: ~

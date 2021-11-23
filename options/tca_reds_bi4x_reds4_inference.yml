@@ -1,0 +1,32 @@
+name: tca_reds_bi4x_model_reds4_inference
+model_type: TCAInferenceModel
+scale: 4
+num_gpu: 1
+manual_seed: 1
+logger_name: TCA-Learning
+
+datasets:
+  test_reds4:
+    name: REDS4
+    type: VideoRecurrentInferenceDataset
+    dataroot_lq: ./dataset/REDS4/BI4x
+    meta_info_file: ./data/meta_info/meta_info_REDS4_test_GT.txt
+    io_backend:
+      type: disk
+
+    cache_data: false
+    num_frame: -1
+
+network_g:
+  type: TCAInferenceArch
+  mid_channels: 64
+  num_blocks: 30
+  spynet_pretrained: ~
+
+path:
+  pretrain_network_g: ./checkpoints/tca_basicvsr_reds_bi4x_model.pth
+  strict_load_g: true
+  param_key_g: network_g
+
+val:
+  suffix: ~
