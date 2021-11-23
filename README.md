@@ -7,12 +7,12 @@ Test data includes REDS4, Vid4, SPMC30, Vimeo90K-T and UDM10. Before evaluation,
 and put them in given paths.
 
 | Type                     | Download URL                                | Path                                                      |
-| ------------------------ |:-------------------------------------------:|:---------------------------------------------------------:|
-| REDS4                    | [REDS4 download](https://seungjunnah.github.io/Datasets/reds.html)                                      |./dataset/REDS4     |
-| SPMC30                   | [SPMC30 download](https://drive.google.com/drive/folders/1ULUNRZfZfuiLUy8N0E0ZpRUOcWaPhLfe?usp=sharing) |./dataset/SPMC30    |
-| UDM10                    | [UDM10 download](https://drive.google.com/drive/folders/1PB7OHKUujMfmns6aYU_U3gwC7SfZorwZ?usp=sharing)  |./dataset/UDM10     |
-| Vid4                     | [Vid4 download](https://drive.google.com/drive/folders/1276bKDRlhghQll5iS3_9GOU2MNTzfxv4?usp=sharing)   |./dataset/Vid4      |
-| Vimeo90K-T               | [Vimeo90K-T download](http://toflow.csail.mit.edu/)                                                     |./dataset/Vimeo90K-T|
+| ------------------------ |:-------------------------------------------:|:-----------------------------------------:|
+| REDS4                    | [REDS4 download](https://seungjunnah.github.io/Datasets/reds.html)                      |./dataset/REDS4     |
+| SPMC30                   | [SPMC30 download](https://github.com/jiangsutx/SPMC_VideoSR)                            |./dataset/SPMC30    |
+| UDM10                    | [UDM10 download](https://github.com/psychopa4/PFNL)          |./dataset/UDM10           |
+| Vid4                     | [Vid4 download](https://drive.google.com/file/d/1ZuvNNLgR85TV_whJoHM7uVb-XW1y70DW/view) |./dataset/Vid4      |
+| Vimeo90K-T               | [Vimeo90K-T download](http://toflow.csail.mit.edu/)                                     |./dataset/Vimeo90K-T|
 
 For BI degradation, we adopt matlab imresize function. 
 For BD degradation, we adopt `BD_degradation.m`.
