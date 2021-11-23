@@ -15,7 +15,10 @@ and put them in given paths.
 | Vimeo90K-T               | [Vimeo90K-T download](http://toflow.csail.mit.edu/)                                     |./dataset/Vimeo90K-T|
 
 For BI degradation, we adopt matlab imresize function. 
+
 For BD degradation, we adopt `BD_degradation.m`.
+
+Note that LR of SPMC30 has pixel shift, you should use standard imresize function to obtain LR frames.
 
 ## Code
 
