@@ -1,5 +1,5 @@
 # Learning Temporal Consistency for Video Super-Resolution
-> Anonymous code repo
+> official implementation
 
 ## Dataset
 
