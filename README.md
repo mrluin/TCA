@@ -5,6 +5,15 @@
 
 Gif comparison (fig1, fig7-fig9) in our main paper can be download from [GoogleDrive](https://drive.google.com/drive/folders/1bO6Sfl54QuO5PD3NNF4ZutZ-4Geg2Qnd?usp=sharing)
 
+<p align="left">
+  <a href="https://github.com/mrluin/TCA">
+    <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig1_comparison.gif"/>
+    <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig7_comparison.gif"/>
+    <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig8_comparison_l.gif"/>
+    <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig9_comparison.gif"/>
+  </a>
+</p>
+
 ## Dataset
 
 Test data includes REDS4, Vid4, SPMC30, Vimeo90K-T and UDM10. Before evaluation, please download corresponding testing 
