@@ -1,6 +1,10 @@
 # Learning Temporal Consistency for Video Super-Resolution
 > official implementation
 
+## Download of Visualization Results
+
+Gif comparison (fig1, fig7-fig9) in our main paper can be download from [GoogleDrive](https://drive.google.com/drive/folders/1bO6Sfl54QuO5PD3NNF4ZutZ-4Geg2Qnd?usp=sharing)
+
 ## Dataset
 
 Test data includes REDS4, Vid4, SPMC30, Vimeo90K-T and UDM10. Before evaluation, please download corresponding testing 
