@@ -23,7 +23,7 @@
 
 <p align="left">
   <a href="https://github.com/mrluin/TCA">
-    <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig8_comparison_l.gif"/>
+    <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig9_comparison.gif"/>
   </a>
 </p>
 
