@@ -7,24 +7,34 @@
   <a href="https://github.com/mrluin/TCA">
     <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig1_comparison.gif"/>
   </a>
+
+  Fig. 1. Visual comparison of BasicVSR (top-right) and our TCA learning (bottom-right). The left if HR video. BasicVSR suffers from flickering artifacts, while our TCA learning can better keep temporal consistency of video results.
 </p>
+
+
 
 <p align="left">
   <a href="https://github.com/mrluin/TCA">
     <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig7_comparison.gif"/>
   </a>
+  
+  Fig. 7. Visual comparison of BasicVSR (left, red rectangle) and our TCA learning (right, cyan-blue rectangle). In rectangle region, BasicVSR suffers from flickering artifacts, while in our TCA learning flickering artifacts are effectively alleviated.
 </p>
 
 <p align="left">
   <a href="https://github.com/mrluin/TCA">
     <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig8_comparison_l.gif"/>
   </a>
+  
+  Fig. 8. Visual comparison of BasicVSR (left, top red rectangle) and our TCA learning (right, bottom cyan-blue rectangle). In rectangle region, BasicVSR suffers from flickering artifacts, while in our TCA learning flickering artifacts are effectively alleviated.
 </p>
 
 <p align="left">
   <a href="https://github.com/mrluin/TCA">
     <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig9_comparison.gif"/>
   </a>
+  
+  Fig. 9. Visual comparison of BasicVSR (left, top red rectangle) and our TCA learning (right, bottom cyan-blue rectangle). In rectangle region, BasicVSR suffers from flickering artifacts, while in our TCA learning flickering artifacts are effectively alleviated.
 </p>
 
 ## Dataset
