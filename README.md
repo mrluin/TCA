@@ -3,6 +3,8 @@
 
 ## GIF Visualization of BasicVSR and Ours
 
+__*GIF Visualization of animated figure, Fig.1 and Fig.7-Fig9, in our paper.*__
+
 <p align="left">
   <a href="https://github.com/mrluin/TCA">
     <img width=90% src="https://github.com/mrluin/TCA/blob/main/fig1_comparison.gif"/>
